@@ -1,0 +1,208 @@
+
+@font-face {
+    font-family: '方正悠黑简体';
+    src: url('../font/方正悠黑简体.TTF');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/*videoBox*/
+.videoBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -100;
+}
+.fullScreenVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+}
+
+/*mainBox*/
+.mainBox{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+/*logo*/
+.logo{
+    width: 100%;
+    padding-top: 30px;
+}
+.logo>a{
+    width: 65px;
+    height: 60px;
+    display: block;
+}
+.logo>a>svg{
+    width: 65px;
+    height: 60px;
+}
+/*infoBox*/
+.infoBox{
+    width: 100%;
+    height: 100%;
+    margin: 50px auto;
+}
+.info{
+    text-align: center;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Thin.otf');
+}
+.info>h1{
+    font-family: 'Montserrat';
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.info p{
+    font-family: 'Montserrat';
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.portrait{
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.portrait>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+.portrait>img:hover{
+    opacity: 1;
+    animation: portraitAnimate 2s;
+    cursor: pointer;
+}
+@keyframes portraitAnimate {
+    0%{
+        opacity: 0.1;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.links{
+    margin-top: 10px;
+}
+.links>ul>li{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.links>ul>li>a{
+    margin-bottom: -10px;
+    display: block;
+    font-family: 'Montserrat';
+}
+.links>ul>li i{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    opacity: 0.5;
+    vertical-align: middle;
+}
+.blogIcon{
+    background: url("../img/blog.png") no-repeat;
+    background-size: contain;
+}
+.githubIcon{
+    background: url("../img/github.png") no-repeat;
+    background-size: contain;
+}
+.projectIcon{
+    background: url("../img/project.png") no-repeat;
+    background-size: contain;
+}
+.resumeIcon{
+    background: url("../img/resume.png") no-repeat;
+    background-size: contain;
+}
+.links>ul>li:hover{
+    transform: translateY(10px);
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.musicBox{
+    width: 284px;
+    height: 66px;
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-264px);
+}
+#bgMusic{
+    width: 264px;
+    height: 66px;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+}
+#musicArrow{
+    width: 20px;
+    height: 66px;
+    background-color: #390050;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    font-size: 20px;
+    line-height: 66px;
+    text-align: center;
+    color: white;
+    transition: 2s;
+    opacity: 0.4;
+    cursor: pointer;
+}
+#musicArrow:hover{
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 330px) {
+    .infoBox{
+        margin: 10px auto;
+    }
+}
